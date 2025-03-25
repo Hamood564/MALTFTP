@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Logging and Streaming -->
+        <EditText
+            android:id="@+id/etLogFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Log File Name" />
+
+        <EditText
+            android:id="@+id/etLogLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Log Level"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnSetLogger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Logger"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etStreamText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stream Text"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etStreamFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stream File Name" />
+
+        <Button
+            android:id="@+id/btnStreamOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stream Out"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnStreamIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stream In"
+            android:layout_marginTop="8dp" />
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Result will be shown here"
+            android:textSize="16sp" />
+
+
+        <Spinner
+            android:id="@+id/spinnerTransferType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/transfer_types" />
+
+        <Button
+            android:id="@+id/btnSetTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Transfer Type"
+            android:layout_marginTop="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/mode_types" />
+
+        <Button
+            android:id="@+id/btnSetMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Mode"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

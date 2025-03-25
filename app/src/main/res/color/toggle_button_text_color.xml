@@ -1,0 +1,5 @@
+<!-- res/color/toggle_button_color.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#f6f8ff" android:state_checked="true" />
+    <item android:color="@android:color/black" android:state_checked="false" />
+</selector>

@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FTPClient_MALT" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#434656</item>
+        <item name="colorPrimaryVariant">#3700B3</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#000000</item>
+        <item name="colorSecondaryVariant">#018786</item>
+        <item name="colorOnSecondary">#000000</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:windowBackground">#83C5FF</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <!-- Button styles -->
+        <item name="buttonStyle">@style/Widget.CustomButton</item>
+        <!-- Text input styles -->
+        <item name="textInputStyle">@style/Widget.CustomTextInput</item>
+        <!-- ImageButton styles -->
+        <item name="imageButtonStyle">@style/Widget.CustomImageButton</item>
+    </style>
+
+    <!-- Custom button style -->
+    <style name="Widget.CustomButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">#434656</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/roboto_med</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.CustomButton</item>
+    </style>
+
+    <!-- Custom text input style -->
+    <style name="Widget.CustomTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#434656</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="hintTextColor">#434656</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- Custom ImageButton style -->
+    <style name="Widget.CustomImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:tint">#434656</item>
+    </style>
+
+    <!-- Custom button shape appearance -->
+    <style name="ShapeAppearance.CustomButton" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+
+</resources>

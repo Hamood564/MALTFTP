@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Toolbar at the top -->
+    <!-- Toolbar at the top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- Container to hold app name and image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- App name TextView -->
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MALT FTP"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- Image next to app name -->
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="App Icon"
+                android:src="@drawable/logo2" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <!-- CardView containing Project Name and IP Address -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#f6f8ff"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Horizontal Layout for Project Name and Value -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Project Name Label -->
+                <TextView
+                    android:id="@+id/tvProjectName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="Project Name: "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Project Name Value -->
+                <TextView
+                    android:id="@+id/tvProjectNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Connection Status Indicator -->
+                <ImageView
+                    android:id="@+id/connectionStatusIndicator"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-2dp"
+                    android:contentDescription="Connection Status"
+                    android:src="@drawable/circle_red" /> <!-- Default to red circle -->
+
+
+            </LinearLayout>
+
+
+            <!-- Horizontal Layout for IP Address and Value -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- IP Address Label -->
+                <TextView
+                    android:id="@+id/tvIpAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IP Address: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <!-- IP Address Value -->
+                <TextView
+                    android:id="@+id/tvIpAddressValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Horizontal Layout for IP Address and Value -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- IP Address Label -->
+                <TextView
+                    android:id="@+id/tvDirectoryPath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Directory Path: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <!-- IP Address Value -->
+                <TextView
+                    android:id="@+id/tvDirectoryPathValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <!-- Directory Listing inside a CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#f6f8ff"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <ListView
+            android:id="@+id/lvDirectoryListing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/textViewItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnUploadFile"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="+"
+            android:textSize="40dp" />
+
+        <!-- Download Selected Files ImageButton -->
+
+        <ImageButton
+            android:id="@+id/btnDownloadSelected"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textViewItemName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="-22dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Download Selected"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_downloadfile_24" />
+
+        <!-- Delete Selected Files ImageButton -->
+
+        <ImageButton
+            android:id="@+id/btnDeleteSelected"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textViewItemName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="-23dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete Selected"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_delete_sweep_24" />
+
+        <ImageButton
+            android:id="@+id/btnChangeProject"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textViewItemName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="-23dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Change Project"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_replacemajor_svgrepo_com" />
+
+        <ImageButton
+            android:id="@+id/btnHelpFTP"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textViewItemName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="410dp"
+            android:layout_marginTop="-23dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Help FTP Project"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_help_center_24" />
+
+        <ToggleButton
+            android:id="@+id/toggleSelectMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/toggle_button_color"
+            android:text="Select Mode"
+            android:textOff="Disabled"
+            android:textOn="Enabled"
+            android:textColor="@color/toggle_button_text_color" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

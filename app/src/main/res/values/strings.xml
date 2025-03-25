@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MALT FTP</string>
+    <string-array name="transfer_types">
+        <item>ASCII</item>
+        <item>Binary</item>
+    </string-array>
+    <string-array name="mode_types">
+        <item>ACTIVE</item>
+        <item>PASSIVE</item>
+    </string-array>
+</resources>
